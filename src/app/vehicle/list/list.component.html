@@ -1,0 +1,30 @@
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Name</th>
+        <th>Fuel Type</th>
+        <th>Color</th>
+        <th>Model</th>
+        <th>Action</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of listData; let i = index">
+        <td>{{ car.category }}</td>
+        <td>{{ car.name }}</td>
+        <td>{{ car.fueltype }}</td>
+        <td>{{ car.color }}</td>
+        <td>{{ car.model }}</td>
+        <td>
+          <button (click)="onDetail(i)" routerLink="/category">Category</button>
+        </td>
+        <td>
+          <button (click)="onDetail(i)" routerLink="detail">Detail</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
